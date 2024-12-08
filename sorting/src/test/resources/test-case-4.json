@@ -1,0 +1,4 @@
+{
+  "description": "Test containing digits only in random order",
+  "list": [1, 9, 2, 3, 8, 6, 0, 5, 4, 7]
+}
