@@ -25,4 +25,30 @@ class BubbleSortTest {
 
         Assertions.assertTrue(ListUtils.isSorted(digitsOnlyTC.getList(), SortingOrder.ASCENDING));
     }
+
+    @Test
+    void test10KList() {
+        TestCase mediumListTC = TestCaseFileUtils.loadTestCaseFromFile(TestCaseConstants.MEDIUM_10K_5);
+        int listSize = mediumListTC.getList().size();
+
+        LOGGER.info("[START] BubbleSort - {}", mediumListTC.getDescription());
+        bubbleSort.sort(mediumListTC.getList(), SortingOrder.ASCENDING);
+        LOGGER.info("[END] BubbleSort - {}", mediumListTC.getDescription());
+
+        Assertions.assertEquals(listSize, mediumListTC.getList().size());
+        Assertions.assertTrue(ListUtils.isSorted(mediumListTC.getList(), SortingOrder.ASCENDING));
+    }
+
+    @Test
+    void test100KList() {
+        TestCase bigListTC = TestCaseFileUtils.loadTestCaseFromFile(TestCaseConstants.BIG_100K_6);
+        int listSize = bigListTC.getList().size();
+
+        LOGGER.info("[START] BubbleSort - {}", bigListTC.getDescription());
+        bubbleSort.sort(bigListTC.getList(), SortingOrder.ASCENDING);
+        LOGGER.info("[END] BubbleSort - {}", bigListTC.getDescription());
+
+        Assertions.assertEquals(listSize, bigListTC.getList().size());
+        Assertions.assertTrue(ListUtils.isSorted(bigListTC.getList(), SortingOrder.ASCENDING));
+    }
 }

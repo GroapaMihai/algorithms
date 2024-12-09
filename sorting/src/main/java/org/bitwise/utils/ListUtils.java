@@ -24,4 +24,36 @@ public class ListUtils {
 
         return true;
     }
+
+    public static Integer getMaxElement(final List<Integer> list) {
+        if (list.isEmpty()) {
+            return null;
+        }
+
+        Integer max = Integer.MIN_VALUE;
+
+        for (Integer element : list) {
+            if (element > max) {
+                max = element;
+            }
+        }
+
+        return max;
+    }
+
+    public static Integer getMinElement(final List<Integer> list) {
+        if (list.isEmpty()) {
+            return null;
+        }
+
+        Integer max = Integer.MAX_VALUE;
+
+        for (Integer element : list) {
+            if (element < max) {
+                max = element;
+            }
+        }
+
+        return max;
+    }
 }
