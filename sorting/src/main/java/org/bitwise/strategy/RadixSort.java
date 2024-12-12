@@ -51,6 +51,10 @@ public class RadixSort implements ISortingAlgorithm {
         }
 
         shiftLeftNegativeNumbers(list);
+
+        if (sortingOrder == SortingOrder.DESCENDING) {
+            ListUtils.reverseList(list);
+        }
     }
 
     /**

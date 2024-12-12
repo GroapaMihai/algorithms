@@ -1,5 +1,6 @@
 package org.bitwise.utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListUtils {
@@ -55,5 +56,21 @@ public class ListUtils {
         }
 
         return max;
+    }
+
+    public static List<Integer> extractSublist(final List<Integer> list,
+                                               final int startIndex,
+                                               final int endIndex) {
+        List<Integer> sublist = new ArrayList<>();
+
+        if (startIndex < 0 || startIndex > endIndex || endIndex >= list.size()) {
+            return sublist;
+        }
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            sublist.add(list.get(i));
+        }
+
+        return sublist;
     }
 }
