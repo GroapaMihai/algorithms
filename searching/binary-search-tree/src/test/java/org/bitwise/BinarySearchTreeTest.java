@@ -79,4 +79,83 @@ public class BinarySearchTreeTest {
 
         Assertions.assertEquals(expectedList, postorderList);
     }
+
+    @Test
+    void testNullTreeHeight() {
+        bst = new BinarySearchTree();
+
+        int height = bst.height();
+
+        Assertions.assertEquals(0, height);
+    }
+
+    @Test
+    void testBalancedTreeHeight() {
+        bst = new BinarySearchTree();
+
+        bst.insert(50);
+        bst.insert(30);
+        bst.insert(20);
+        bst.insert(40);
+        bst.insert(70);
+        bst.insert(60);
+        bst.insert(80);
+
+        int height = bst.height();
+
+        Assertions.assertEquals(3, height);
+    }
+
+    @Test
+    void testUnbalancedTreeHeight() {
+        bst = new BinarySearchTree();
+
+        bst.insert(20);
+        bst.insert(30);
+        bst.insert(40);
+        bst.insert(50);
+        bst.insert(60);
+        bst.insert(70);
+        bst.insert(80);
+
+        int heightBefore = bst.height();
+
+        Assertions.assertEquals(7, heightBefore);
+
+        bst.balanceTree();
+
+        int heightAfter = bst.height();
+
+        Assertions.assertEquals(3, heightAfter);
+    }
+
+    @Test
+    void testBalancedTreeIsBalanced() {
+        bst = new BinarySearchTree();
+
+        bst.insert(50);
+        bst.insert(30);
+        bst.insert(20);
+        bst.insert(40);
+        bst.insert(70);
+        bst.insert(60);
+        bst.insert(80);
+
+        Assertions.assertTrue(bst.isTreeBalanced());
+    }
+
+    @Test
+    void testUnbalancedTreeIsNotBalanced() {
+        bst = new BinarySearchTree();
+
+        bst.insert(20);
+        bst.insert(30);
+        bst.insert(40);
+        bst.insert(50);
+        bst.insert(60);
+        bst.insert(70);
+        bst.insert(80);
+
+        Assertions.assertFalse(bst.isTreeBalanced());
+    }
 }

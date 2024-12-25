@@ -120,4 +120,60 @@ public class BinarySearchTree {
         postorder(node.getRight(), postorderList);
         postorderList.add(node.getValue());
     }
+
+    public int height() {
+        return heightRecursively(root);
+    }
+
+    private int heightRecursively(final Node node) {
+        if (node == null) {
+            return 0;
+        }
+
+        return 1 + Math.max(
+            heightRecursively(node.getLeft()),
+            heightRecursively(node.getRight())
+        );
+    }
+
+    public void balanceTree() {
+        List<Integer> inorderList = inorder();
+
+        root = balanceTreeRecursively(inorderList, 0, inorderList.size() - 1);
+    }
+
+    private Node balanceTreeRecursively(final List<Integer> inorderList,
+                                        final int left,
+                                        final int right) {
+        if (left > right) {
+            return null;
+        }
+
+        int middle = left + (right - left) / 2;
+
+        Node node = new Node();
+
+        node.setValue(inorderList.get(middle));
+        node.setLeft(balanceTreeRecursively(inorderList, left, middle - 1));
+        node.setRight(balanceTreeRecursively(inorderList, middle + 1, right));
+
+        return node;
+    }
+
+    public boolean isTreeBalanced() {
+        return isTreeBalancedRecursively(root);
+    }
+
+    private boolean isTreeBalancedRecursively(Node node) {
+        if (node == null || node.isLeaf()) {
+            return true;
+        }
+
+        int leftHeight = heightRecursively(node.getLeft());
+        int rightHeight = heightRecursively(node.getRight());
+
+        return Math.abs(leftHeight - rightHeight) <= 1 &&
+            isTreeBalancedRecursively(node.getLeft()) &&
+            isTreeBalancedRecursively(node.getRight());
+    }
 }
