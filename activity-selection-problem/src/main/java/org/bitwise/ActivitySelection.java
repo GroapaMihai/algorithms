@@ -23,7 +23,7 @@ public class ActivitySelection {
             Activity currentActivity = activities.get(i);
             Activity lastSelectedActivity = selectedActivites.get(selectedActivites.size() - 1);
 
-            if (currentActivity.getStartTime().compareTo(lastSelectedActivity.getEndTime()) > 0) {
+            if (currentActivity.getStartTime().compareTo(lastSelectedActivity.getEndTime()) >= 0) {
                 selectedActivites.add(currentActivity);
             }
         }

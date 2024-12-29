@@ -2,6 +2,6 @@
   {"name": "The Glass Curtain", "startTime": {"hour": 12, "minute": 30}, "endTime": {"hour": 16, "minute": 30}},
   {"name": "Echoes of Tomorrow", "startTime": {"hour": 15, "minute": 0}, "endTime": {"hour": 18, "minute": 0}},
   {"name": "The Velvet Paradox", "startTime": {"hour": 10, "minute": 0}, "endTime": {"hour": 18, "minute": 30}},
-  {"name": "Shadows on the Stage", "startTime": {"hour": 18, "minute": 10}, "endTime": {"hour": 20, "minute": 45}},
+  {"name": "Shadows on the Stage", "startTime": {"hour": 18, "minute": 0}, "endTime": {"hour": 20, "minute": 45}},
   {"name": "When the Stars Fell Silent", "startTime": {"hour": 12, "minute": 15}, "endTime": {"hour": 13, "minute": 0}}
 ]

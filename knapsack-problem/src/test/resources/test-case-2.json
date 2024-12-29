@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Gold Coin",
+    "weight": 3,
+    "value": 8
+  },
+  {
+    "name": "Silver Ring",
+    "weight": 2,
+    "value": 6
+  },
+  {
+    "name": "Bronze Medal",
+    "weight": 5,
+    "value": 4
+  },
+  {
+    "name": "Diamond Pendant",
+    "weight": 1,
+    "value": 10
+  },
+  {
+    "name": "Wooden Shield",
+    "weight": 8,
+    "value": 7
+  },
+  {
+    "name": "Iron Sword",
+    "weight": 6,
+    "value": 9
+  },
+  {
+    "name": "Steel Armor",
+    "weight": 7,
+    "value": 10
+  },
+  {
+    "name": "Potion of Healing",
+    "weight": 2,
+    "value": 5
+  },
+  {
+    "name": "Magic Wand",
+    "weight": 4,
+    "value": 7
+  },
+  {
+    "name": "Leather Boots",
+    "weight": 3,
+    "value": 6
+  }
+]
